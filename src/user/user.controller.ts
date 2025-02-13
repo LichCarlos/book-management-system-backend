@@ -8,7 +8,7 @@ import {
   Delete,
 } from '@nestjs/common';
 import { UserService } from './user.service';
-
+import { UpdateUserDto } from './dto/update-user.dto';
 import { RegisterUserDto } from './dto/register-user.dto';
 
 @Controller('user')

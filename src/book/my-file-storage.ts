@@ -1,4 +1,4 @@
-import * as multer from "multer";
+import * as multer from 'multer';
 import * as fs from 'fs';
 
 const storage = multer.diskStorage({
@@ -10,7 +10,12 @@ const storage = multer.diskStorage({
     cb(null, 'uploads')
   },
   filename: function (req, file, cb) {
-    const uniqueSuffix = Date.now() + '-' + Math.round(Math.random() * 1E9) + '-' + file.originalname
+    const uniqueSuffix =
+      Date.now() +
+      '-' +
+      Math.round(Math.random() * 1e9) +
+      '-' +
+      file.originalname;
     cb(null, uniqueSuffix)
   }
 });
